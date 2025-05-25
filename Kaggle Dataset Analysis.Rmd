@@ -1,0 +1,43 @@
+---
+title: "Kaggle Dataset Analysis"
+author: "Nova Nur Halimah"
+date: "2025-05-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This portfolio presents an exploratory data analysis (EDA) of Kaggle datasets, aiming to understand patterns related to dataset popularity, particularly through the number of upvotes. The analysis is conducted using R and visualized with ggplot2.
+
+#Dataset
+The dataset used is kaggle.csv, containing metadata about datasets on Kaggle including:
+1. Data_Type: format type (CSV, JSON, etc.)
+2. Upvote: number of upvotes per dataset
+3. File_Count: number of files in the dataset
+4. Last_Update: last update year
+
+#Analyses & Findings
+1. Dataset Type vs Upvotes
+   - CSV is by far the most popular dataset type dengan total upvotes tertinggi.
+   - Tipe "other" juga signifikan yang menandakan adanya format non-standar yang juga diminati.
+   - Format seperti JSON, SQLITE, dan kombinasi lainnya jauh lebih sedikit diminati.
+
+Statistical Insight: CSV mendapatkan lebih dari 200.000 upvotes yang menunjukkan kesederhanaan dan kemudahan pengguna format ini menjadi daya tarik utama.
+
+2. File Count vs Upvotes
+   - Korelasi antara file count dan jumlah upvotes positif namun lemah.
+   - Mayoritas dataset memiliki file yang berjumlah sedikit, yaitu di bawah 1000.
+   - Terdapat outlier dengan file sangat banyak namun tetap mendapatkan sedikit upvotes.
+
+Statistical Insight: Korelasi dengan nilai 0.12 ini berarti jumlah file tidak menentukan popularitas dataset.
+
+3. Upvotes Over Time (Yearly Trend)
+   - Tahun 2021 menjadi puncak tertinggi upvotes dataset.
+   - Penurunan drastis terjadi setelahnya, khususnya di 2023.
+   - Kenaikan kembali mulai terlihat pada tahun 2024.
+
+Interpretation:
+- Lonjakan di 2021 kemungkinan besar dipicu oleh meningkatnya aktivitas data science saat pandemi.
+- Penurunan bisa disebabkan kejenuhan pengguna, pergeseran tren, atau kurangnya dataset relevan.
